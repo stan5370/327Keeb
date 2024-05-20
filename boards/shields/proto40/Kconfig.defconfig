@@ -1,0 +1,6 @@
+if SHIELD_PROTO40
+
+config ZMK_KEYBOARD_NAME
+    default "proto40"
+
+endif
