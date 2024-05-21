@@ -1,0 +1,8 @@
+file_format: "1"
+id: proto40
+name: Proto40
+type: shield
+url: https://github.com/stan5370/327Keeb
+requires: [nrf5340_dk]
+features:
+  - keys
