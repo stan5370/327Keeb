@@ -9,27 +9,26 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ----------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q   |  W   |  E   |  R   |  T   |-------|-------|   Y   |  U    |  I   |  O   |   P   |  \    |
-            // |  TAB  |  A   |  S   |  D   |  F   |  G   |-------|-------|   H   |  J    |  K   |  L   |   ;   |  '    |
-            // | SHIFT |  Z   |  X   |  C   |  V   |  B   |-------|-------|   N   |  M    |  ,   |  .   |   /   | ENTER |
-            // | CTRL  | WIN  | LCTL | LALT | LGUI | SPACE| SPACE | SPACE |  RAIS | LARW | DARW | UARW  | RARW  |-------|
-
-
             bindings = <
                 &kp ESC    &kp Q    &kp W     &kp E    &kp R     &kp T    &kp Y     &kp U    &kp I     &kp O    &kp P     &kp BSLH
                 &kp TAB    &kp A    &kp S     &kp D    &kp F     &kp G    &kp H     &kp J    &kp K     &kp L    &kp SEMI  &kp SQT
                 &kp LSHIFT &kp Z    &kp X     &kp C    &kp V     &kp B    &kp N     &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RET
-                &kp LCTRL  &kp LGUI &kp LALT  &mo 3    &kp SPACE &mo 1    &kp BSPC  &kp DEL  &kp LEFT  &kp DOWN &kp UP    &kp RIGHT
+                &kp LCTRL  &kp LGUI &kp LALT  &out OUT_TOG    &kp SPACE &mo 1    &kp BSPC  &kp DEL  &kp LEFT  &kp DOWN &kp UP    &kp RIGHT
             >;
         };
 
         lower {
+            // ----------------------------------------------------------------------------------------------------------
+            // |  ESC  |  F2  |  F3  |  F4  |  F5  |  F6  |-------|-------|   F7  |  F8   |  F9  | F10  |  F11  |  F12  |
+            // |   ~   |  !   |  @   |  #   |  $   |  %   |-------|-------|   ^   |   &   |  *   |  (   |   )   |  DEL  |
+            // |       |  F1  |  F2  |  F3  |  F4  |  F5  |-------|-------|   F6  |   _   |  +   |  {   |   }   |   |   |
+            // |       |  F7  |  F8  |  F9  |  F10 |  F11 |-------|-------|   F12 | LS(#) |LS(|) |      |       |       |
+            // |-------|      |      |      |      |      |       |       |       | NEXT  | Vol- | Vol+ | PLAY  |-------|
             bindings = <
-                &kp N1     &kp N2   &kp N3   &kp N4    &kp N5   &kp N6    &kp N7   &kp N8    &kp N9   &kp N0    &kp MINUS &kp EQUAL
-                &kp F1     &kp F2   &kp F3   &kp F4    &kp F5   &kp F6    &kp F7   &kp F8    &kp F9   &kp F10   &kp F11   &kp F12
-                &kp LSHIFT &kp GRAVE &bt BT_CLR &bt BT_NXT &bt BT_PRV &bt BT_DISC &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG
-                &kp LCTRL  &kp LGUI &kp LALT  &none    &trans    &mo 1    &trans    &trans   &trans    &trans   &trans    &trans
+                &kp ESC    &kp Q    &kp W     &kp E    &kp R     &kp T    &kp Y     &kp U    &kp I     &kp O    &kp P     &kp BSLH
+                &kp TAB    &kp A    &kp S     &kp D    &kp F     &kp G    &kp H     &kp J    &kp K     &kp L    &kp SEMI  &kp SQT
+                &kp LSHIFT &kp Z    &kp X     &kp C    &kp V     &kp B    &kp N     &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RET
+                &kp LCTRL  &kp LGUI &kp LALT  &out OUT_TOG    &kp SPACE &mo 1    &kp BSPC  &kp DEL  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
             >;
         };
     };
